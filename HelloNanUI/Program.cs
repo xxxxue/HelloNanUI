@@ -1,4 +1,4 @@
-using NetDimension.NanUI;
+ï»¿using NetDimension.NanUI;
 using NetDimension.NanUI.DataServiceResource;
 using NetDimension.NanUI.EmbeddedFileResource;
 using NetDimension.NanUI.HostWindow;
@@ -16,27 +16,27 @@ namespace HelloNanUI
 
                   env.CustomCefSettings(settings =>
                   {
-                      // ÔÚ´Ë´¦ÉèÖÃ CEF µÄÏà¹Ø²ÎÊı
+                      // åœ¨æ­¤å¤„è®¾ç½® CEF çš„ç›¸å…³å‚æ•°
                   });
 
                   env.CustomCefCommandLineArguments(commandLine =>
                   {
-                      // ÔÚ´Ë´¦Ö¸¶¨ CEF ÃüÁîĞĞ²ÎÊı
+                      // åœ¨æ­¤å¤„æŒ‡å®š CEF å‘½ä»¤è¡Œå‚æ•°
                   });
 
               }, app =>
               {
-                  // ×¢²áÄ¿Â¼ÖĞµÄÎÄ¼ş
+                  // æ³¨å†Œç›®å½•ä¸­çš„æ–‡ä»¶ (é€šè¿‡ "http://local/js/request.js" è°ƒç”¨)
                   app.UseEmbeddedFileResource("http", "local", "wwwroot");
-                  //×Ô¶¯É¨Ãè²¢×¢²áµ±Ç°³ÌĞò¼¯ÖĞµÄËùÓĞ·şÎñ
+                  // è‡ªåŠ¨æ‰«æå¹¶æ³¨å†Œå½“å‰ç¨‹åºé›†ä¸­çš„æ‰€æœ‰æœåŠ¡ (ajaxé€šè¿‡ "http://api" å³å¯è°ƒç”¨
                   app.UseDataServiceResource("http", "api");
 
 
-                  // Ö¸¶¨Æô¶¯´°Ìå
+                  // æŒ‡å®šå¯åŠ¨çª—ä½“
                   app.UseMainWindow(context => new MainWindow());
               });
 
-            // ¿ªÆô¸ß·ÖÆÁÖ§³Ö
+            // å¼€å¯é«˜åˆ†å±æ”¯æŒ
             Application.SetHighDpiMode(HighDpiMode.PerMonitorV2);
 
             app.Build().Run();
@@ -51,10 +51,10 @@ namespace HelloNanUI
             {
                 Size = new Size(1024, 768);
             }
-            
+
             protected override void OnReady()
             {
-               ShowDevTools();
+                ShowDevTools();
                 base.OnReady();
             }
         }
