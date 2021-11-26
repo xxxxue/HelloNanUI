@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="wwwroot\index.html" />
+    <None Remove="wwwroot\js\request.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="wwwroot\index.html" />
+    <EmbeddedResource Include="wwwroot\js\request.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NetDimension.NanUI" Version="0.8.80.493" />
+    <PackageReference Include="NetDimension.NanUI.DataServiceResource" Version="0.8.80.176" />
+    <PackageReference Include="NetDimension.NanUI.EmbeddedFileResource" Version="0.8.80.493" />
+    <PackageReference Include="NetDimension.NanUI.LocalFileResource" Version="0.8.80.176" />
+    <PackageReference Include="NetDimension.NanUI.Runtime" Version="80.1.15" />
+    <PackageReference Include="NetDimension.NanUI.ZippedResource" Version="0.8.80.176" />
+  </ItemGroup>
+
+</Project>
